@@ -22,7 +22,7 @@ header{
     background-color: var(--fundo-header);
     padding: 20px;
     display: flex;
-
+    width: 100%;
 }
 
 header .toggle{
@@ -35,13 +35,10 @@ header .toggle{
 
 nav{
     max-width: 200px;
-    height: calc(100% - 58px);
+    height: 100%;
     display: flex;
     flex-direction: column;
     background-color: var(--fundo-header);
-    position: fixed;
-    top: 58px;
-    left: 0;
     overflow-y: auto;
     padding: 0 20px;
     opacity: 1;
@@ -68,6 +65,29 @@ nav ul li a {
     padding: 10px;
     display: block;
     padding-left: 1em;
+}
+
+nav ul li a:hover {
+    /*background-color: #3a3a3a;*/
+    transform: scale(1.05);
+    transition: all 0.3s ease-in-out;
+}
+
+main {
+    display: flex;
+    width: 100%;
+    height: calc(100% - 93px);
+}
+
+footer {
+    /*position: fixed;
+    bottom: 0;*/
+    width: 100%;
+    background-color: var(--fundo-header);
+    padding: 10px;
+    text-align: center;
+    color: var(--text);
+    font-size: .8em;
 }
 
 @media screen and (max-width: 768px) {
