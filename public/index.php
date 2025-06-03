@@ -31,9 +31,20 @@
 
             </ul>
         </nav>
-        
+
         <section> <!-- conteiner da pagina -->
-            
+            <?php 
+                if (isset( $_GET['url'] ) ){
+                    echo '<h1>' . $_GET['url'] . '</h1>';
+                    if ( file_exists('page/' . $_GET['url'] . '.php') ){
+                        include 'page/' . $_GET['url'] . '.php';
+                    } else {
+                        include 'pages/404.php';
+                    }
+                }else{
+                    include 'page/dashboard.php';
+                }
+            ?>
         </section> <!-- FIM do conteiner da pagina -->
     </main>
 
