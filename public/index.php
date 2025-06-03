@@ -31,9 +31,10 @@
 
             </ul>
         </nav>
-        <section>
+        
+        <section> <!-- conteiner da pagina -->
             
-        </section>
+        </section> <!-- FIM do conteiner da pagina -->
     </main>
 
     <footer>
