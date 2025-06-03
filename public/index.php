@@ -23,8 +23,8 @@
         <nav class="">
             <ul>
 
-                <li><a href="#"> <i class="bi bi-graph-up-arrow"></i> Home</a></li>
-                <li><a href="#"> <i class="bi bi-building-fill-down"></i> Despesas</a></li>
+                <li><a href="dashboard"> <i class="bi bi-graph-up-arrow"></i> Home</a></li>
+                <li><a href="despesas"> <i class="bi bi-building-fill-down"></i> Despesas</a></li>
                 <li><a href="#"> <i class="bi bi-building-add"></i> Receitas</a></li>
                 <li><a href="#"> <i class="bi bi-file-earmark-bar-graph"></i> Relatórios</a></li>
                 <li><a href="#"> <i class="bi bi-indent"></i> Logoff</a></li>
