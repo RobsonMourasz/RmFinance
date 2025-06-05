@@ -33,17 +33,18 @@
         </nav>
 
         <section> <!-- conteiner da pagina -->
-            <?php 
-                if (isset( $_GET['url'] ) ){
-                    echo '<h1>' . $_GET['url'] . '</h1>';
-                    if ( file_exists('page/' . $_GET['url'] . '.php') ){
-                        include 'page/' . $_GET['url'] . '.php';
-                    } else {
-                        include 'pages/404.php';
-                    }
-                }else{
-                    include 'page/dashboard.php';
+            <?php
+            if (isset($_GET['url'])) {
+                echo '<h1>' . $_GET['url'] . '</h1>';
+                if (file_exists('page/' . $_GET['url'] . '.php')) {
+                    include 'page/' . $_GET['url'] . '.php';
+                } else {
+                    include 'pages/404.php';
                 }
+            } else {
+                include 'page/404.php';
+                echo '<h1>ERRO</h1>';
+            }
             ?>
         </section> <!-- FIM do conteiner da pagina -->
     </main>
@@ -80,6 +81,13 @@
                 nav.classList.remove('nav-toggle');
             }
         });
+
+        function limparParametrosURL() {
+            window.history.replaceState({}, "", window.location.pathname);
+        }
+
+        // Chamando a função após carregar os dados da página
+        document.addEventListener("DOMContentLoaded", limparParametrosURL);
     </script>
 
 </body>
