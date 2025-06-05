@@ -25,9 +25,9 @@
 
                 <li><a href="dashboard"> <i class="bi bi-graph-up-arrow"></i> Home</a></li>
                 <li><a href="despesas"> <i class="bi bi-building-fill-down"></i> Despesas</a></li>
-                <li><a href="#"> <i class="bi bi-building-add"></i> Receitas</a></li>
-                <li><a href="#"> <i class="bi bi-file-earmark-bar-graph"></i> Relatórios</a></li>
-                <li><a href="#"> <i class="bi bi-indent"></i> Logoff</a></li>
+                <li><a href="receitas"> <i class="bi bi-building-add"></i> Receitas</a></li>
+                <li><a href="relatorios"> <i class="bi bi-file-earmark-bar-graph"></i> Relatórios</a></li>
+                <li><a href="logoff"> <i class="bi bi-indent"></i> Logoff</a></li>
 
             </ul>
         </nav>
@@ -35,15 +35,13 @@
         <section> <!-- conteiner da pagina -->
             <?php
             if (isset($_GET['url'])) {
-                echo '<h1>' . $_GET['url'] . '</h1>';
                 if (file_exists('page/' . $_GET['url'] . '.php')) {
                     include 'page/' . $_GET['url'] . '.php';
                 } else {
-                    include 'pages/404.php';
+                    include 'page/404.php';
                 }
             } else {
-                include 'page/404.php';
-                echo '<h1>ERRO</h1>';
+                include 'page/dashboard.php';
             }
             ?>
         </section> <!-- FIM do conteiner da pagina -->
