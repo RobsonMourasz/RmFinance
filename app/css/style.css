@@ -383,8 +383,9 @@ table td:last-child {
     gap: 10px;
 }
 .modal .modal-body form label{
+    display: inline-block;
     color: #656565;
-    margin-bottom: 10px;
+    padding-bottom: 5px;
 }
 .modal .modal-body form input,
 .modal .modal-body form select{
