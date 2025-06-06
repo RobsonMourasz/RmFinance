@@ -87,7 +87,7 @@
         // Chamando a função após carregar os dados da página
         document.addEventListener("DOMContentLoaded", limparParametrosURL);
     </script>
-
+    <script src="../app/js/acoes.js"></script>
 </body>
 
 </html>

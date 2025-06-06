@@ -6,7 +6,7 @@
 </div>
 
 <div class="content">
-    <div> <button class="btn bg-danger">Cadastrar</button> </div>
+    <div> <button class="btn bg-danger" mostrar-modal="nome_modal">Cadastrar</button> </div>
 
     <div class="table-responsive">
         <table class="table table-striped table-bordered">
@@ -39,10 +39,10 @@
 
 <div class="container-modal" id="nome_modal">
 
-    <div class="modal">
+    <div class="modal" >
         <div class="modal-header">
             <h2>Cadastro de Despesas</h2>
-            <button class="btn bg-transparent-dark" onclick="document.getElementById('nome_modal').style.display='none'">&times;</button>
+            <button class="btn bg-transparent-dark" ocultar-modal="nome_modal">&times;</button>
         </div>
 
         <div class="modal-body">
@@ -69,7 +69,7 @@
         </div>
 
         <div class="modal-footer">
-            <button class="btn bg-transparent-dark" onclick="document.getElementById('nome_modal').style.display='none'">Fechar</button>
+            <button class="btn bg-transparent-dark" ocultar-modal="nome_modal">Fechar</button>
         </div>
     </div>
 
