@@ -1,3 +1,13 @@
+<?php 
+    if (isset($_COOKIE['relogar'])){
+        if ($_COOKIE['relogar'] == 's') {
+            die('
+                <script>
+                    window.location.href = "public/index.php";
+                </script>');
+        }
+    }
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>

@@ -1,3 +1,12 @@
+<?php 
+    require '../src/constantes.php';
+    if (!isset($_SESSION)){session_start();}
+    if ( !isset($_SESSION['sessao']) || $_SESSION['sessao'] == 0 || $_SESSION['sessao'] == '' || empty($_SESSION['usuario'])) {
+        die("<script>alert('Acesso negado!');window.location.href='../index.php';</script>"); // Redireciona para a página de login
+        exit;
+    }else if($_SESSION['sessao'] == 1){
+        
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -5,7 +14,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="../app/css/style.css">
+    <link rel="stylesheet" href="<?php echo URL_BASE.'app/css/style.css' ?>">
     <title>Bem vindo</title>
 </head>
 
@@ -14,7 +23,7 @@
     <header>
         <div class="toggle">x</div>
         <div class="logo">
-            RM SISTEMAS
+            RM SISTEMAS | Bem vindo <?php echo $_SESSION['usuario'] . ' ---    '. URL_BASE;?>
         </div> <!-- Logo do site -->
     </header>
 
@@ -35,6 +44,9 @@
         <section> <!-- conteiner da pagina -->
             <?php
             if (isset($_GET['url'])) {
+                if ($_GET['url'] == 'logoff'){
+                    die(header("Location: ../src/logoff.php"));
+                }
                 if (file_exists('page/' . $_GET['url'] . '.php')) {
                     include 'page/' . $_GET['url'] . '.php';
                 } else {
@@ -87,7 +99,13 @@
         // Chamando a função após carregar os dados da página
         document.addEventListener("DOMContentLoaded", limparParametrosURL);
     </script>
-    <script src="../app/js/acoes.js"></script>
+    <script src="<?php echo URL_BASE.'app/js/acoes.js'?>"></script>
 </body>
 
 </html>
+<?php
+    } else{
+        die("<script>alert('Acesso negado!');window.location.href='../index.php';</script>"); // Redireciona para a página de login
+        exit;
+    }
+?>

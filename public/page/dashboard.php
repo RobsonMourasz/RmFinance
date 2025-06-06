@@ -1,3 +1,7 @@
+<?php 
+    require_once __DIR__.'/../../src/seguranca.php'; // Verifica se o usuário está logado
+?>
+
 <div class="content">
     <div class="header">
         <h1>Dashboard</h1>
