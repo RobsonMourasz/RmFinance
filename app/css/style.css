@@ -284,6 +284,7 @@ section .content .header{
 .btn{
     display: inline-block;
     padding: 10px 20px;
+    margin: 0 .5em ;
     border-radius: 5px;
     text-decoration: none;
     transition: background-color 0.3s ease;
@@ -383,9 +384,12 @@ table td:last-child {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
 }
 .modal .modal-body{
     margin-top: 10px;
+    max-height: 400px;
+    overflow-y: auto;
 }
 .modal .modal-body form{
     display: flex;
@@ -447,6 +451,57 @@ table td:last-child {
     height: 100% !important;
 }
 
+.form-check{
+    display: flex;
+    align-items: center;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+    padding: 10px 0;
+  }
+  
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 25px;
+  }
+  
+  .slider::before {
+    position: absolute;
+    content: "";
+    height: 12px;
+    width: 11px;
+    left: 2px;
+    bottom: 3.5px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+  }
+  
+  input:checked + .slider {
+    background-color: #4CAF50;
+  }
+  
+  input:checked + .slider::before {
+    transform: translateX(25px);
+  }
+  
 @media screen and (max-width: 400px) {
 
     section .content .header {
@@ -462,6 +517,10 @@ table td:last-child {
     .card-movimentacao {
         width: 100%;
         max-width: 100%;
+    }
+
+    .btn{
+        width: 100%;
     }
     
 }
@@ -529,4 +588,11 @@ table td:last-child {
 .bg-transparent-dark {
     background-color: transparent !important;
     color: #000000 !important;
+}
+
+.justify-content-center {
+    justify-content: center !important;
+}
+.justify-content-start {
+    justify-content: start !important;
 }

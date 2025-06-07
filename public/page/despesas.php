@@ -68,6 +68,19 @@ require_once __DIR__ . '/../../src/seguranca.php'; // Verifica se o usuário est
                     <label for="descricao" class="form-label">Descrição</label>
                     <input type="text" class="form-control" id="descricao" placeholder="Digite a descrição da despesa">
                 </div>
+
+                <div class="mb-3">
+                    <label for="categoria" class="form-label">Categoria</label>
+                    <select name="categoria" id="categoria" class="form-control">
+                        <option value="">Selecione ---</option>
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label for="documento" class="form-label">Documento</label>
+                    <input type="text" class="form-control" id="documento" name="documento">
+                </div>
+
                 <div class="col">
                     <div class="row">
                         <div class="mb-3">
@@ -81,11 +94,50 @@ require_once __DIR__ . '/../../src/seguranca.php'; // Verifica se o usuário est
                     </div>
                 </div>
 
-                <button type="submit" class="btn bg-success">Salvar</button>
+                <div class="col">
+                    <div class="row justify-content-center">
+                        <div class="mb-3 form-check">
+                            <label for="pago" class="switch form-label">
+                                <input type="checkbox" class="form-check-input " id="pago" name="pago" value="1">
+                                <span class="slider"></span>
+                                Pago
+                            </label>
+                        </div>
+
+                        <div class="mb-3 form-check">
+                            <label for="parcelar" class="switch form-label">
+                                <input type="checkbox" class="form-check-input " id="parcelar" name="parcelar" value="1">
+                                <span class="slider"></span>
+                                Parcelar
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="parcelas" class="form-label">Parcelas</label>
+                    <input type="number" class="form-control" id="parcelas" name="parcelas" placeholder="Quantidade de parcelas">
+                    <div class="col">
+                        <div class="row justify-content-start">
+                            <div class="mb-3 justify-content-start">
+                                <label for="parcelar-valor" class="form-label">Por valor </label>
+                                <input type="radio" name="valor" id="parcelar-valor" checked>
+                            </div>
+                            <div class="mb-3 justify-content-start">
+                                <label for="parcelar-parcelas" class="form-label">Por parcelas </label>
+                                <input type="radio" name="valor" id="parcelar-parcelas">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
             </form>
         </div>
 
         <div class="modal-footer">
+            <button type="submit" class="btn bg-success">Salvar</button>
+            <button type="submit" class="btn bg-success">Salvar + </button>
             <button class="btn bg-transparent-dark" ocultar-modal="modal-cadastrar-despesa">Fechar</button>
         </div>
     </div>
@@ -106,6 +158,16 @@ require_once __DIR__ . '/../../src/seguranca.php'; // Verifica se o usuário est
                     <label for="descricao" class="form-label">Descrição</label>
                     <input type="text" class="form-control" id="descricao" placeholder="Digite a descrição da despesa">
                 </div>
+
+                <div class="mb-3">
+                    <label for="categoria" class="form-label">Categoria</label>
+                    <select name="categoria" id="categoria" class="form-control">
+                        <option value="">Selecione ---</option>
+                    </select>
+                </div>
+
+
+
                 <div class="col">
                     <div class="row">
                         <div class="mb-3">

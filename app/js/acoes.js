@@ -17,10 +17,10 @@
     });
     
     /* OCULTA O MODAL AO CLICAR FORA DO MODAL */
-    document.querySelectorAll('.container-modal').forEach(background => {
-        background.addEventListener('click', function() {
-            this.classList.remove('is-active');
-        });
-    });
+    // document.querySelectorAll('.container-modal').forEach(background => {
+    //     background.addEventListener('click', function() {
+    //         this.classList.remove('is-active');
+    //     });
+    // });
 
 })();
