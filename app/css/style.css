@@ -347,6 +347,18 @@ table td:last-child {
     padding: 0;
     text-align: center;
 }
+.table-responsive .table-footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    font-weight: bold;
+}
+.table-responsive .table-footer .table-footer-td{
+    display: inline-block;
+    width: 30%;
+    text-align: center;
+}
 
 .container-modal{
     display: none;

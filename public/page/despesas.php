@@ -1,5 +1,5 @@
-<?php 
-    require_once __DIR__.'/../../src/seguranca.php'; // Verifica se o usuário está logado
+<?php
+require_once __DIR__ . '/../../src/seguranca.php'; // Verifica se o usuário está logado
 ?>
 
 <div class="content">
@@ -33,19 +33,30 @@
                     <td class="bg-danger">N</td>
                     <td>01/10/2023</td>
                     <td>
-                        <button class=" btn-table bg-transparent-dark" mostrar-modal="modal-editar-despesa" ><i class="bi bi-pencil-square" style="color: #494949;"></i></button>
-                        <button class=" btn-table bg-transparent-dark" mostrar-modal="modal-excluir-despesa" ><i class="bi bi-trash-fill" style="color: #494949;"></i></button>
+                        <button class=" btn-table bg-transparent-dark" mostrar-modal="modal-editar-despesa"><i class="bi bi-pencil-square" style="color: #494949;"></i></button>
+                        <button class=" btn-table bg-transparent-dark" mostrar-modal="modal-excluir-despesa"><i class="bi bi-trash-fill" style="color: #494949;"></i></button>
                     </td>
                 </tr>
                 <!-- Mais linhas podem ser adicionadas aqui -->
             </tbody>
         </table>
+        <div class="table-footer">
+            <div class="table-footer-td">
+                <p>Total aberto: <span class="text-danger">R$ 1.200,00</span></p>
+            </div>
+            <div class="table-footer-td">
+                <p>Total pago: <span class="text-success">R$ 0,00</span></p>
+            </div>
+            <div class="table-footer-td">
+                <p>Total: <span class="text-warning">R$ 1.200,00</span></p>
+            </div>
+        </div>
     </div> <!-- table-responsive -->
 </div> <!-- content-->
 
 <div class="container-modal" id="modal-cadastrar-despesa">
 
-    <div class="modal" >
+    <div class="modal">
         <div class="modal-header">
             <h2>Cadastro de Despesas</h2>
             <button class="btn bg-transparent-dark" ocultar-modal="modal-cadastrar-despesa">&times;</button>
@@ -83,7 +94,7 @@
 
 <div class="container-modal" id="modal-editar-despesa">
 
-    <div class="modal" >
+    <div class="modal">
         <div class="modal-header">
             <h2>Editar Despesa</h2>
             <button class="btn bg-transparent-dark" ocultar-modal="modal-editar-despesa">&times;</button>
@@ -121,7 +132,7 @@
 
 <div class="container-modal" id="modal-excluir-despesa">
 
-    <div class="modal" >
+    <div class="modal">
         <div class="modal-header">
             <h2>Realmente desja excluir essa despesa?</h2>
             <button class="btn bg-transparent-dark" ocultar-modal="modal-excluir-despesa">&times;</button>
