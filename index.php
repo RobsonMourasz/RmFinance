@@ -1,6 +1,11 @@
 <?php 
     if (isset($_COOKIE['relogar'])){
         if ($_COOKIE['relogar'] == 's') {
+            if (!isset($_SESSION)) {
+                session_start();
+            }
+            $_SESSION['usuario'] = !isset($_SESSION['usuario']) ? $_COOKIE['usuario']: $_SESSION['usuario'];
+            $_SESSION['sessao'] = !isset($_SESSION['sessao']) ? 1 : $_SESSION['sessao'];
             die('
                 <script>
                     window.location.href = "public/index.php";
