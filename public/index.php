@@ -23,7 +23,7 @@
     <header>
         <div class="toggle">x</div>
         <div class="logo">
-            RM SISTEMAS | Bem vindo <?php echo $_SESSION['usuario'] . ' ---    '. URL_BASE;?>
+            RM SISTEMAS | Bem vindo <?php echo $_SESSION['usuario']?>
         </div> <!-- Logo do site -->
     </header>
 
