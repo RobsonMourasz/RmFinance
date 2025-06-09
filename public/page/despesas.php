@@ -30,7 +30,7 @@ require_once __DIR__ . '/../../src/seguranca.php'; // Verifica se o usuário est
                     <td>1</td>
                     <td>Aluguel</td>
                     <td>R$ 1.200,00</td>
-                    <td class="bg-danger">N</td>
+                    <td class="bg-title-danger">N</td>
                     <td>01/10/2023</td>
                     <td>
                         <button class=" btn-table bg-transparent-dark" mostrar-modal="modal-editar-despesa"><i class="bi bi-pencil-square" style="color: #494949;"></i></button>
@@ -58,38 +58,42 @@ require_once __DIR__ . '/../../src/seguranca.php'; // Verifica se o usuário est
 
     <div class="modal">
         <div class="modal-header">
-            <h2>Cadastro de Despesas</h2>
-            <button class="btn bg-transparent-dark" ocultar-modal="modal-cadastrar-despesa">&times;</button>
+            <div class="title">
+                <h2>Cadastro de Despesas</h2>
+            </div>
+            <div class="btn-fechar">
+                <button class="btn bg-transparent-dark" ocultar-modal="modal-cadastrar-despesa">&times;</button>
+            </div>
         </div>
 
         <div class="modal-body">
             <form>
                 <div class="mb-3">
-                    <label for="descricao" class="form-label">Descrição</label>
-                    <input type="text" class="form-control" id="descricao" placeholder="Digite a descrição da despesa">
+                    <label for="cad_descricao" class="form-label">Descrição</label>
+                    <input type="text" class="form-control" id="cad_descricao" placeholder="Digite a descrição da despesa" name="descricao">
                 </div>
 
                 <div class="mb-3">
                     <label for="categoria" class="form-label">Categoria</label>
-                    <select name="categoria" id="categoria" class="form-control">
+                    <select name="categoria" id="cad_categoria" class="form-control" name="categoria">
                         <option value="">Selecione ---</option>
                     </select>
                 </div>
 
                 <div class="mb-3">
-                    <label for="documento" class="form-label">Documento</label>
-                    <input type="text" class="form-control" id="documento" name="documento">
+                    <label for="cad_documento" class="form-label">Documento</label>
+                    <input type="text" class="form-control" id="cad_documento" name="documento">
                 </div>
 
                 <div class="col">
                     <div class="row">
                         <div class="mb-3">
-                            <label for="valor" class="form-label">Valor</label>
-                            <input type="number" class="form-control" id="valor" placeholder="Digite o valor da despesa">
+                            <label for="cad_valor_total" class="form-label">Valor</label>
+                            <input type="number" class="form-control" id="cad_valor_total" placeholder="Digite o valor da despesa" name="valor_total">
                         </div>
                         <div class="mb-3">
-                            <label for="data" class="form-label">Data</label>
-                            <input type="date" class="form-control" id="data">
+                            <label for="cad_data_vencimento" class="form-label">Data</label>
+                            <input type="date" class="form-control data-now" id="cad_data_vencimento" name="data_vencimento">
                         </div>
                     </div>
                 </div>
@@ -97,16 +101,16 @@ require_once __DIR__ . '/../../src/seguranca.php'; // Verifica se o usuário est
                 <div class="col">
                     <div class="row justify-content-center">
                         <div class="mb-3 form-check">
-                            <label for="pago" class="switch form-label">
-                                <input type="checkbox" class="form-check-input " id="pago" name="pago" value="1">
+                            <label for="cad_pago" class="switch form-label">
+                                <input type="checkbox" class="form-check-input " id="cad_pago" name="pago" value="1">
                                 <span class="slider"></span>
                                 Pago
                             </label>
                         </div>
 
                         <div class="mb-3 form-check">
-                            <label for="parcelar" class="switch form-label">
-                                <input type="checkbox" class="form-check-input " id="parcelar" name="parcelar" value="1">
+                            <label for="cad_parcelar" class="switch form-label">
+                                <input type="checkbox" class="form-check-input " id="cad_parcelar" name="parcelar" value="1">
                                 <span class="slider"></span>
                                 Parcelar
                             </label>
@@ -148,35 +152,42 @@ require_once __DIR__ . '/../../src/seguranca.php'; // Verifica se o usuário est
 
     <div class="modal">
         <div class="modal-header">
-            <h2>Editar Despesa</h2>
-            <button class="btn bg-transparent-dark" ocultar-modal="modal-editar-despesa">&times;</button>
+            <div class="title">
+                <h2>Editar Despesa</h2>
+            </div>
+            <div class="btn-fechar">
+                <button class="btn bg-transparent-dark" ocultar-modal="modal-editar-despesa">&times;</button>
+            </div>
         </div>
 
         <div class="modal-body">
             <form>
                 <div class="mb-3">
                     <label for="descricao" class="form-label">Descrição</label>
-                    <input type="text" class="form-control" id="descricao" placeholder="Digite a descrição da despesa">
+                    <input type="text" class="form-control" id="edt_descricao" name="descricao">
                 </div>
 
                 <div class="mb-3">
                     <label for="categoria" class="form-label">Categoria</label>
-                    <select name="categoria" id="categoria" class="form-control">
+                    <select name="categoria" id="edt_categoria" class="form-control">
                         <option value="">Selecione ---</option>
                     </select>
                 </div>
 
-
+                <div class="mb-3">
+                    <label for="edt_documento" class="form-label">Documento</label>
+                    <input type="text" class="form-control" id="edt_documento" name="documento">
+                </div>
 
                 <div class="col">
                     <div class="row">
                         <div class="mb-3">
-                            <label for="valor" class="form-label">Valor</label>
-                            <input type="number" class="form-control" id="valor" placeholder="Digite o valor da despesa">
+                            <label for="edt_valor_total" class="form-label">Valor</label>
+                            <input type="number" class="form-control" id="edt_valor_total">
                         </div>
                         <div class="mb-3">
-                            <label for="data" class="form-label">Data</label>
-                            <input type="date" class="form-control" id="data">
+                            <label for="edt_data_vencimento" class="form-label">Data</label>
+                            <input type="date" class="form-control" id="edt_data_vencimento">
                         </div>
                     </div>
                 </div>
@@ -196,8 +207,12 @@ require_once __DIR__ . '/../../src/seguranca.php'; // Verifica se o usuário est
 
     <div class="modal">
         <div class="modal-header">
-            <h2>Realmente desja excluir essa despesa?</h2>
-            <button class="btn bg-transparent-dark" ocultar-modal="modal-excluir-despesa">&times;</button>
+            <div class="title">
+                <h2>Realmente desja excluir essa despesa?</h2>
+            </div>
+            <div class="btn-fechar">
+                <button class="btn bg-transparent-dark" ocultar-modal="modal-excluir-despesa">&times;</button>
+            </div>
         </div>
 
         <div class="modal-body">

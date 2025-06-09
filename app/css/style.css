@@ -333,6 +333,13 @@ table th {
     background-color: #f2f2f2;
     font-weight: bold;
 }
+table th:nth-child(4){ /* MEXE APENAS NA LINHA DO PAGO */
+    width: 4%;
+    text-align: center;
+}
+table tr td:nth-child(4){ /* MEXE APENAS NA LINHA DO PAGO */
+    text-align: center;
+}
 table tr:nth-child(even) {
     background-color: #f9f9f9;
 }
@@ -523,6 +530,32 @@ table td:last-child {
         width: 100%;
     }
     
+    .modal .modal-footer{
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .modal-header{
+        flex-direction: column-reverse;
+        align-items: center;
+
+    }
+
+    .modal .modal-header h2{
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+    }
+
+    .modal-header .btn-fechar{
+        display: flex;
+        width: 100%;
+    }
+
+    .modal-header .btn-fechar button{
+        text-align: end;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -595,4 +628,8 @@ table td:last-child {
 }
 .justify-content-start {
     justify-content: start !important;
+}
+.bg-title-danger{
+    background-color: #ff0c00 !important;
+    color: #fafafa !important;
 }
