@@ -556,6 +556,15 @@ table td:last-child {
     .modal-header .btn-fechar button{
         text-align: end;
     }
+
+    .modal .row{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .modal .mb-3{
+        width: 100%;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -628,6 +637,9 @@ table td:last-child {
 }
 .justify-content-start {
     justify-content: start !important;
+}
+.text-align-center {
+    text-align: center !important;
 }
 .bg-title-danger{
     background-color: #ff0c00 !important;

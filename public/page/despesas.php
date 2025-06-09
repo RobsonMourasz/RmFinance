@@ -189,15 +189,23 @@ require_once __DIR__ . '/../../src/seguranca.php'; // Verifica se o usuário est
                             <label for="edt_data_vencimento" class="form-label">Data</label>
                             <input type="date" class="form-control" id="edt_data_vencimento">
                         </div>
+                        <div class="mb-3 form-check justify-content-center">
+                            <label for="edt_pago" class="switch form-label">
+                                <input type="checkbox" class="form-check-input " id="edt_pago" name="pago" value="1">
+                                <span class="slider"></span>
+                                Pago
+                            </label>
+                        </div>
                     </div>
                 </div>
 
-                <button type="submit" class="btn bg-info">Editar</button>
+                
             </form>
         </div>
 
         <div class="modal-footer">
-            <button class="btn bg-transparent-dark" ocultar-modal="modal-editar-despesa">Fechar</button>
+            <button type="submit" class="btn bg-info">Editar</button>
+            <button class="btn bg-transparent-dark" ocultar-modal="modal-cadastrar-despesa">Fechar</button>
         </div>
     </div>
 
